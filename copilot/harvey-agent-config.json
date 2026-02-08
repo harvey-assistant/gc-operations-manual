@@ -1,0 +1,44 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "harvey-ops",
+        "name": "Harvey - Operations Co-Pilot",
+        "workspace": "/Users/clawdbot/clawd",
+        "agentDir": "projects/master-operations-manual/copilot",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-5"
+        },
+        "thinking": "off",
+        "systemPrompt": {
+          "files": [
+            "SYSTEM-PROMPT.md",
+            "KNOWLEDGE-BASE.md"
+          ]
+        }
+      }
+    ]
+  },
+  "channels": {
+    "slack": {
+      "channels": {
+        "harvey": {
+          "enabled": true,
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "harvey-ops",
+      "match": {
+        "channel": "slack",
+        "peer": {
+          "kind": "channel",
+          "id": "C0ADKHSFB2R"
+        }
+      }
+    }
+  ]
+}

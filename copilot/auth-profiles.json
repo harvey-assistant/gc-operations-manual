@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "profiles": {
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "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"
+    },
+    "openai:default": {
+      "type": "api_key",
+      "provider": "openai",
+      "key": "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"
+    }
+  },
+  "lastGood": {
+    "anthropic": "anthropic:default",
+    "openai": "openai:default"
+  },
+  "usageStats": {
+    "anthropic:default": {
+      "lastUsed": 1770576147826,
+      "errorCount": 0,
+      "lastFailureAt": 1770549682829
+    }
+  }
+}

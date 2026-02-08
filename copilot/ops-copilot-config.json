@@ -1,0 +1,40 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "ops-copilot",
+        "name": "GC Operations Co-Pilot",
+        "workspace": "/Users/clawdbot/clawd",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-5"
+        },
+        "thinking": "off",
+        "compaction": {
+          "mode": "safeguard"
+        }
+      }
+    ]
+  },
+  "channels": {
+    "slack": {
+      "channels": {
+        "ops-copilot": {
+          "enabled": true,
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "ops-copilot",
+      "match": {
+        "channel": "slack",
+        "peer": {
+          "kind": "channel",
+          "id": "ops-copilot"
+        }
+      }
+    }
+  ]
+}
